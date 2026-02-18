@@ -1,0 +1,16 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Mufakira Ramadan",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Ramadan",
+  "start_url": "https://kitty717.github.io/-/aya-ultimate-plan.html",
+  "theme_color": "#ffffff",
+  "description": "This app is designed for aya",
+  "lang": "ar",
+  "categories": [
+    "lifestyle"
+  ]
+}

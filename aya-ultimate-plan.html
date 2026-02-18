@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<title>✨ خطة Aya الشاملة للتنشيف والشد ✨</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fff6fb 0%, #ffe6f2 100%);
+  margin: 0;
+  padding: 20px;
+  direction: rtl;
+  min-height: 100vh;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 77, 166, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 77, 166, 0.8);
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.8s ease;
+}
+
+h1 {
+  color: #ff4da6;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(255, 77, 166, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.subtitle {
+  color: #cc0066;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.stats-banner {
+  background: linear-gradient(135deg, #ff4da6, #ff0066);
+  color: white;
+  padding: 25px;
+  border-radius: 20px;
+  margin: 20px 0;
+  animation: fadeInUp 1s ease, glow 2s ease-in-out infinite;
+  box-shadow: 0 8px 25px rgba(255, 77, 166, 0.4);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.stat-number {
+  font-size: 2em;
+  font-weight: bold;
+  display: block;
+  margin: 5px 0;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.motivational-banner {
+  background: linear-gradient(90deg, #ff4da6, #ff0066, #ff4da6);
+  background-size: 200% auto;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 20px 0;
+  animation: shimmer 3s linear infinite, fadeInUp 1s ease;
+  box-shadow: 0 5px 15px rgba(255, 77, 166, 0.4);
+}
+
+.section {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.8s ease;
+  animation-fill-mode: both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 77, 166, 0.3);
+}
+
+.section:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.3s; }
+.section:nth-child(4) { animation-delay: 0.4s; }
+.section:nth-child(5) { animation-delay: 0.5s; }
+.section:nth-child(6) { animation-delay: 0.6s; }
+.section:nth-child(7) { animation-delay: 0.7s; }
+
+h2 {
+  color: #cc0066;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  border-bottom: 3px solid #ffe6f2;
+  padding-bottom: 10px;
+}
+
+.calorie-tracker {
+  background: linear-gradient(135deg, #fff0f8, #ffe6f2);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 15px 0;
+  border: 3px solid #ff4da6;
+}
+
+.calorie-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.calorie-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(255, 77, 166, 0.2);
+  transition: all 0.3s ease;
+}
+
+.calorie-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(255, 77, 166, 0.4);
+}
+
+.calorie-number {
+  font-size: 2.5em;
+  color: #ff0066;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0;
+}
+
+.meal-plan {
+  background: linear-gradient(135deg, #e6fff2, #f0fff6);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 15px 0;
+  border-right: 5px solid #00cc66;
+}
+
+.meal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 204, 102, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.meal-time {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #009944;
+}
+
+.meal-calories {
+  background: #00cc66;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.meal-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.option-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #e6fff2;
+  transition: all 0.3s ease;
+}
+
+.option-card:hover {
+  border-color: #00cc66;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 204, 102, 0.2);
+}
+
+.option-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #009944;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.exercise {
+  background: linear-gradient(135deg, #ffe6f2 0%, #fff0f8 100%);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 12px;
+  border-left: 5px solid #ff4da6;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.exercise:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 5px 15px rgba(255, 77, 166, 0.2);
+}
+
+.exercise::before {
+  content: '✓';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: #ff4da6;
+  opacity: 0.1;
+}
+
+.exercise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.exercise-name {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #cc0066;
+}
+
+.video-btn {
+  background: linear-gradient(135deg, #ff4da6, #ff0066);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+.video-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 77, 166, 0.5);
+}
+
+.exercise-details {
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.exercise-benefit {
+  color: #666;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.food {
+  background: linear-gradient(135deg, #e6fff2 0%, #f0fff6 100%);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 12px;
+  border-left: 5px solid #00cc66;
+  transition: all 0.3s ease;
+}
+
+.food:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 5px 15px rgba(0, 204, 102, 0.2);
+}
+
+.highlight {
+  color: #ff0066;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 15px;
+  background: linear-gradient(135deg, #fff0f8, #ffe6f2);
+  border-radius: 10px;
+  margin: 15px 0;
+  display: block;
+  border-right: 4px solid #ff4da6;
+}
+
+.progress-tracker {
+  background: linear-gradient(135deg, #fff0f8, white);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+  border: 2px dashed #ff4da6;
+}
+
+.checkbox-item {
+  margin: 10px 0;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.checkbox-item:hover {
+  background: #ffe6f2;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  accent-color: #ff4da6;
+}
+
+.checkbox-item label {
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.water-tracker {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+  justify-content: center;
+}
+
+.water-glass {
+  width: 40px;
+  height: 60px;
+  background: linear-gradient(180deg, transparent 50%, #4da6ff 50%);
+  border: 3px solid #0066cc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.water-glass:hover {
+  transform: scale(1.1);
+}
+
+.water-glass.filled {
+  background: linear-gradient(180deg, transparent 0%, #4da6ff 0%);
+  animation: float 2s ease-in-out infinite;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.tip-card {
+  background: linear-gradient(135deg, #fff0f8, #ffe6f2);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 77, 166, 0.3);
+}
+
+.tip-icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.emoji-float {
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.countdown {
+  text-align: center;
+  background: linear-gradient(135deg, #ff4da6, #ff0066);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.warning-box {
+  background: linear-gradient(135deg, #fff4e6, #ffe6cc);
+  border-right: 5px solid #ff9933;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+.success-box {
+  background: linear-gradient(135deg, #e6f9ff, #ccf2ff);
+  border-right: 5px solid #0099cc;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  .exercise-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .video-btn {
+    margin-top: 10px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .meal-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: #cc0066;
+  font-weight: bold;
+}
+
+.snack-box {
+  background: linear-gradient(135deg, #fff9e6, #fff4cc);
+  padding: 15px;
+  border-radius: 12px;
+  margin: 10px 0;
+  border-right: 4px solid #ffcc00;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>✨ خطة Aya الشاملة للتنشيف والشد ✨</h1>
+  <div class="subtitle">رحلتك نحو جسم أحلامك تبدأ الآن! 💫</div>
+</div>
+
+<div class="stats-banner">
+  <h2 style="color: white; border: none; margin-bottom: 10px;">📊 معلوماتك الشخصية</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-label">🧍‍♀️ الطول</span>
+      <span class="stat-number">153-155</span>
+      <span class="stat-label">سم</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">⚖️ الوزن الحالي</span>
+      <span class="stat-number">53-54</span>
+      <span class="stat-label">كغ</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">🎯 الوزن المثالي</span>
+      <span class="stat-number">48-50</span>
+      <span class="stat-label">كغ</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">📉 الخسارة المستهدفة</span>
+      <span class="stat-number">3-5</span>
+      <span class="stat-label">كغ</span>
+    </div>
+  </div>
+  <div style="margin-top: 20px; font-size: 1.1em;">
+    <strong>هدفك:</strong> تنحيف مناطق معينة + شد الجسم بدون ضعف عام 💪<br>
+    <strong>الطريقة:</strong> عجز خفيف بالسعرات = نزول تدريجي وصحي ✨
+  </div>
+</div>
+
+<div class="motivational-banner">
+  <h3>🌟 أنتِ أقوى مما تتخيلين 🌟</h3>
+  <p>كل تمرين تكملينه وكل وجبة صحية هي خطوة نحو النسخة الأفضل منك!</p>
+</div>
+
+<div class="section">
+  <h2>🔥 خطة السعرات الحرارية المثالية</h2>
+  
+  <div class="calorie-tracker">
+    <h3 style="text-align: center; color: #ff0066; margin-bottom: 20px;">
+      📊 السعرات اليومية المناسبة لجسمك
+    </h3>
+    
+    <div class="calorie-info">
+      <div class="calorie-box">
+        <div style="color: #666;">🎯 السعرات اليومية</div>
+        <span class="calorie-number">1300-1400</span>
+        <div style="color: #666; font-size: 0.9em;">سعرة حرارية</div>
+      </div>
+      
+      <div class="calorie-box">
+        <div style="color: #666;">📉 العجز اليومي</div>
+        <span class="calorie-number">300-400</span>
+        <div style="color: #666; font-size: 0.9em;">سعرة حرارية</div>
+      </div>
+      
+      <div class="calorie-box">
+        <div style="color: #666;">⏱️ خسارة متوقعة</div>
+        <span class="calorie-number">0.5-0.7</span>
+        <div style="color: #666; font-size: 0.9em;">كغ بالأسبوع</div>
+      </div>
+    </div>
+    
+    <div class="success-box">
+      <strong style="color: #0099cc;">✨ ليش هالنظام مثالي إلك؟</strong><br><br>
+      ✅ عجز خفيف = جسمك ما راح يدخل وضع "الجوع"<br>
+      ✅ ينحفك تدريجي بدون ما تخسري عضلات<br>
+      ✅ يحافظ على طاقتك ونشاطك<br>
+      ✅ نتائج ثابتة ومستدامة مش يويو!<br>
+      ✅ ما راح تحسي بحرمان أو جوع شديد
+    </div>
+    
+    <div class="warning-box">
+      <strong style="color: #ff6600;">⚠️ تحذير مهم:</strong><br><br>
+      ❌ لا تنزلي تحت 1200 سعرة أبداً!<br>
+      ❌ أقل من هيك = جسمك راح يبطئ الحرق<br>
+      ❌ راح تخسري عضلات مش دهون<br>
+      ❌ راح تحسي بتعب وإرهاق<br>
+      <br>
+      <strong style="color: #009944;">✅ الحل الذكي:</strong> التزمي بـ 1300-1400 + تمارين منتظمة = نتائج رهيبة!
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🍽️ خطة الأكل التفصيلية (رمضان)</h2>
+  
+  <div class="meal-plan">
+    <div class="meal-header">
+      <span class="meal-time">🌙 الإفطار (6:30 مساءً)</span>
+      <span class="meal-calories">400-450 سعرة</span>
+    </div>
+    
+    <div class="highlight" style="background: white;">
+      <strong>الترتيب الذكي للأكل:</strong><br>
+      1️⃣ تمرة واحدة + كأس ماي دافي<br>
+      2️⃣ انتظري 5 دقائق (للمعدة)<br>
+      3️⃣ شوربة خضار<br>
+      4️⃣ سلطة كبيرة<br>
+      5️⃣ الطبق الرئيسي
+    </div>
+    
+    <div class="meal-options">
+      <div class="option-card">
+        <span class="option-title">🥣 شوربة خضار</span>
+        • 1.5 - 2 كاسة<br>
+        • شعيرية قليلة<br>
+        • سمنة خفيفة جداً<br>
+        • خضار متنوعة<br>
+        <strong style="color: #00cc66;">~80 سعرة</strong>
+      </div>
+      
+      <div class="option-card">
+        <span class="option-title">🥗 سلطة كبيرة</span>
+        • خس + خيار + بندورة<br>
+        • جزر + فليفلة + بقدونس<br>
+        • صوص: خل + ليمون<br>
+        • ½ معلقة صغيرة زيت زيتون<br>
+        <strong style="color: #00cc66;">~50 سعرة</strong>
+      </div>
+      
+      <div class="option-card">
+        <span class="option-title">🍽️ الطبق الرئيسي</span>
+        • فتة حمص: 6-8 معالق<br>
+        • خففي الخبز المقلي<br>
+        • خففي السمنة<br>
+        • أو بديل: رز + دجاج مشوي<br>
+        <strong style="color: #00cc66;">~270 سعرة</strong>
+      </div>
+    </div>
+    
+    <div class="highlight">
+      💡 <strong>نصيحة ذهبية:</strong> كلي ببطء، مضغي كويس، وخلي 20 دقيقة بين كل صحن!
+    </div>
+  </div>
+  
+  <div class="meal-plan">
+    <div class="meal-header">
+      <span class="meal-time">🌃 بعد التراويح (9:00 مساءً)</span>
+      <span class="meal-calories">150-200 سعرة</span>
+    </div>
+    
+    <div class="meal-options">
+      <div class="option-card">
+        <span class="option-title">🍎 خيار 1: فواكه</span>
+        • تفاحة وسط<br>
+        • أو كأس فراولة<br>
+        • أو برتقالة<br>
+        • مع علبة زبادي خفيف<br>
+        <strong style="color: #00cc66;">~150 سعرة</strong>
+      </div>
+      
+      <div class="option-card">
+        <span class="option-title">🥜 خيار 2: مكسرات</span>
+        • 10-12 حبة لوز نيء<br>
+        • أو 6-8 حبات جوز<br>
+        • مع تفاحة صغيرة<br>
+        • بدون ملح!<br>
+        <strong style="color: #00cc66;">~180 سعرة</strong>
+      </div>
+      
+      <div class="option-card">
+        <span class="option-title">🍫 خيار 3: حلويات صحية</span>
+        • 2 تمرة محشوة لوز<br>
+        • أو قطعة صغيرة شوكولاتة داكنة<br>
+        • مع شاي أخضر<br>
+        <strong style="color: #00cc66;">~120 سعرة</strong>
+      </div>
+    </div>
+  </div>
+  
+  <div class="meal-plan">
+    <div class="meal-header">
+      <span class="meal-time">🌅 السحور (3:30 صباحاً)</span>
+      <span class="meal-calories">400-450 سعرة</span>
+    </div>
+    
+    <div class="meal-options">
+      <div class="option-card">
+        <span class="option-title">🥚 خيار 1: بروتين عالي</span>
+        • 2 بيضة مسلوقة<br>
+        • ½ رغيف خبز أسمر<br>
+        • خضار (خيار + بندورة)<br>
+        • لبنة قليلة الدسم<br>
+        <strong style="color: #00cc66;">~380 سعرة</strong>
+      </div>
+      
+      <div class="option-card">
+        <span class="option-title">🥛 خيار 2: زبادي مشبع</span>
+        • 2 علبة زبادي كبيرة<br>
+        • 3 معالق شوفان<br>
+        • معلقة عسل<br>
+        • حفنة فواكه مجففة<br>
+        <strong style="color: #00cc66;">~400 سعرة</strong>
+      </div>
+      
+      <div class="option-card">
+        <span class="option-title">🧀 خيار 3: جبنة وخضار</span>
+        • جبنة بيضاء قليلة دسم<br>
+        • نص رغيف خبز أسمر<br>
+        • خضار متنوعة<br>
+        • 5-6 حبات زيتون<br>
+        <strong style="color: #00cc66;">~420 سعرة</strong>
+      </div>
+    </div>
+    
+    <div class="highlight">
+      💧 <strong>مهم جداً:</strong> اشربي 2-3 كاسات ماي بالسحور + تجنبي الملح والحلويات!
+    </div>
+  </div>
+  
+  <div class="snack-box">
+    <h3 style="color: #ff9900; margin-bottom: 15px;">🍪 سناك إضافي (اختياري)</h3>
+    <strong>إذا حسيتي بجوع شديد بين الوجبات:</strong><br><br>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 10px;">
+      <div style="background: white; padding: 10px; border-radius: 8px;">
+        🥕 خضار نيئة بلا حدود<br>
+        <small>(خيار، كرفس، جزر)</small>
+      </div>
+      <div style="background: white; padding: 10px; border-radius: 8px;">
+        ☕ شاي أخضر أو قهوة<br>
+        <small>(بدون سكر)</small>
+      </div>
+      <div style="background: white; padding: 10px; border-radius: 8px;">
+        🥤 كأس ماي بالنعناع<br>
+        <small>(منعش ومشبع)</small>
+      </div>
+    </div>
+  </div>
+  
+  <div class="success-box">
+    <h3 style="color: #0099cc;">📊 مجموع السعرات اليومي</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; text-align: center;">
+      <div style="background: white; padding: 15px; border-radius: 10px;">
+        <strong>الإفطار</strong><br>
+        <span style="font-size: 1.5em; color: #00cc66;">450</span><br>
+        سعرة
+      </div>
+      <div style="background: white; padding: 15px; border-radius: 10px;">
+        <strong>وجبة خفيفة</strong><br>
+        <span style="font-size: 1.5em; color: #00cc66;">150</span><br>
+        سعرة
+      </div>
+      <div style="background: white; padding: 15px; border-radius: 10px;">
+        <strong>السحور</strong><br>
+        <span style="font-size: 1.5em; color: #00cc66;">400</span><br>
+        سعرة
+      </div>
+      <div style="background: white; padding: 15px; border-radius: 10px;">
+        <strong>المجموع</strong><br>
+        <span style="font-size: 1.5em; color: #ff0066; font-weight: bold;">1000</span><br>
+        سعرة
+      </div>
+    </div>
+    <div style="margin-top: 15px; text-align: center; font-size: 1.1em;">
+      ➕ <strong>حرق التمرين:</strong> 200-300 سعرة<br>
+      ➕ <strong>حرق الجسم الطبيعي:</strong> باقي اليوم<br>
+      = <strong style="color: #ff0066;">عجز مثالي يومي! 🎯</strong>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📊 متتبع التقدم اليومي</h2>
+  <div class="progress-tracker">
+    <h3 style="color: #ff0066; margin-bottom: 15px;">✅ أكملت يومي</h3>
+    <div class="checkbox-item">
+      <input type="checkbox" id="workout-done">
+      <label for="workout-done">💪 تمرين اليوم (15-20 دقيقة)</label>
+    </div>
+    <div class="checkbox-item">
+      <input type="checkbox" id="diet-done">
+      <label for="diet-done">🍽️ التزمت بخطة الأكل</label>
+    </div>
+    <div class="checkbox-item">
+      <input type="checkbox" id="water-done">
+      <label for="water-done">💧 شربت 8-10 أكواب ماء</label>
+    </div>
+    <div class="checkbox-item">
+      <input type="checkbox" id="sleep-done">
+      <label for="sleep-done">😴 نمت 7-8 ساعات</label>
+    </div>
+  </div>
+  
+  <h3 style="color: #0066cc; margin-top: 20px; text-align: center;">💧 متتبع الماء (اضغط لملء كل كأس)</h3>
+  <div class="water-tracker">
+    <div class="water-glass" onclick="this.classList.toggle('filled')"></div>
+    <div class="water-glass" onclick="this.classList.toggle('filled')"></div>
+    <div class="water-glass" onclick="this.classList.toggle('filled')"></div>
+    <div class="water-glass" onclick="this.classList.toggle('filled')"></div>
+    <div class="water-glass" onclick="this.classList.toggle('filled')"></div>
+    <div class="water-glass" onclick="this.classList.toggle('filled')"></div>
+    <div class="water-glass" onclick="this.classList.toggle('filled')"></div>
+    <div class="water-glass" onclick="this.classList.toggle('filled')"></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>💪 روتين التمارين اليومي (مع الفيديوهات!)</h2>
+
+  <div class="exercise">
+    <div class="exercise-header">
+      <span class="exercise-name">🔥 سكوات ضيق</span>
+      <a href="https://www.youtube.com/results?search_query=narrow+squat+arabic+تمرين+سكوات+ضيق" target="_blank" class="video-btn">📺 شاهدي الفيديو</a>
+    </div>
+    <div class="exercise-details">
+      <strong>25 تكرار × 3 جولات</strong><br>
+      استراحة: 30 ثانية بين الجولات
+    </div>
+    <div class="exercise-benefit">
+      ✨ يشد داخل الفخذ + المؤخرة + البطن السفلي
+    </div>
+  </div>
+
+  <div class="exercise">
+    <div class="exercise-header">
+      <span class="exercise-name">🎯 لانجز خلفي</span>
+      <a href="https://www.youtube.com/results?search_query=reverse+lunge+arabic+لانجز+خلفي" target="_blank" class="video-btn">📺 شاهدي الفيديو</a>
+    </div>
+    <div class="exercise-details">
+      <strong>20 لكل رجل × 3 جولات</strong><br>
+      استراحة: 45 ثانية بين الجولات
+    </div>
+    <div class="exercise-benefit">
+      ✨ ينحف الأفخاذ ويصغر المؤخرة بشكل ملحوظ
+    </div>
+  </div>
+
+  <div class="exercise">
+    <div class="exercise-header">
+      <span class="exercise-name">⚡ سكوات نبض</span>
+      <a href="https://www.youtube.com/results?search_query=pulse+squat+arabic+سكوات+نبض" target="_blank" class="video-btn">📺 شاهدي الفيديو</a>
+    </div>
+    <div class="exercise-details">
+      <strong>30 نبضة × 3 جولات</strong><br>
+      استراحة: 30 ثانية بين الجولات
+    </div>
+    <div class="exercise-benefit">
+      ✨ يحرق الدهون الداخلية بسرعة صاروخية!
+    </div>
+  </div>
+
+  <div class="exercise">
+    <div class="exercise-header">
+      <span class="exercise-name">🦵 رفع رجل على الجنب</span>
+      <a href="https://www.youtube.com/results?search_query=side+leg+raise+arabic+رفع+رجل+جانبي" target="_blank" class="video-btn">📺 شاهدي الفيديو</a>
+    </div>
+    <div class="exercise-details">
+      <strong>25 لكل جهة × 3 جولات</strong><br>
+      استراحة: 30 ثانية بين الجهتين
+    </div>
+    <div class="exercise-benefit">
+      ✨ يضرب داخل وخارج الفخذ + الأرداف
+    </div>
+  </div>
+
+  <div class="exercise">
+    <div class="exercise-header">
+      <span class="exercise-name">🍑 جسر المؤخرة</span>
+      <a href="https://www.youtube.com/results?search_query=glute+bridge+arabic+جسر+المؤخرة" target="_blank" class="video-btn">📺 شاهدي الفيديو</a>
+    </div>
+    <div class="exercise-details">
+      <strong>20 × 3 ببطء</strong><br>
+      استراحة: 30 ثانية، اعصري المؤخرة للأعلى!
+    </div>
+    <div class="exercise-benefit">
+      ✨ شد بدون تكبير - مؤخرة مشدودة ومرفوعة
+    </div>
+  </div>
+
+  <div class="exercise">
+    <div class="exercise-header">
+      <span class="exercise-name">💎 بلانك</span>
+      <a href="https://www.youtube.com/results?search_query=plank+exercise+arabic+بلانك" target="_blank" class="video-btn">📺 شاهدي الفيديو</a>
+    </div>
+    <div class="exercise-details">
+      <strong>45 ثانية × 3 جولات</strong><br>
+      استراحة: 30 ثانية، حافظي على استقامة الظهر!
+    </div>
+    <div class="exercise-benefit">
+      ✨ يشد البطن كاملاً ويمنع الكرش
+    </div>
+  </div>
+
+  <div class="exercise">
+    <div class="exercise-header">
+      <span class="exercise-name">🌟 بلانك فتح/غلق</span>
+      <a href="https://www.youtube.com/results?search_query=plank+jacks+arabic+بلانك+فتح+غلق" target="_blank" class="video-btn">📺 شاهدي الفيديو</a>
+    </div>
+    <div class="exercise-details">
+      <strong>15 × 3 جولات</strong><br>
+      استراحة: 45 ثانية بين الجولات
+    </div>
+    <div class="exercise-benefit">
+      ✨ يضرب داخل الفخذ + أسفل البطن + كارديو
+    </div>
+  </div>
+
+  <div class="highlight">
+    ⏱ المدة الكلية: 15–20 دقيقة<br>
+    📅 التكرار: 5–6 أيام بالأسبوع<br>
+    🔥 احرقي 200-300 سعرة حرارية كل تمرين!<br>
+    💪 أفضل وقت: قبل الإفطار بـ 30 دقيقة
+  </div>
+</div>
+
+<div class="section">
+  <h2>⚡ تطوير التمرين مع الوقت</h2>
+  
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-icon">📅</div>
+      <strong>الأسبوع 1-2</strong><br>
+      نفس الأرقام<br>
+      ركزي على الأداء الصحيح
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">💪</div>
+      <strong>الأسبوع 3-4</strong><br>
+      زيدي 5 تكرارات<br>
+      لكل تمرين
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🚀</div>
+      <strong>الأسبوع 5+</strong><br>
+      زيدي جولة إضافية<br>
+      أو استخدمي أوزان خفيفة
+    </div>
+  </div>
+
+  <div class="highlight">
+    🌟 كل أسبوع = جسم أنحف + مشدود + أقوى!
+  </div>
+</div>
+
+<div class="section">
+  <h2>🌙 نصائح خاصة لرمضان المبارك</h2>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-icon emoji-float">⏰</div>
+      <strong>وقت التمرين</strong><br>
+      قبل الفطور بـ 30 دقيقة<br>
+      أو بعده بـ 2-3 ساعات
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon emoji-float">🚶‍♀️</div>
+      <strong>بعد التمرين</strong><br>
+      امشي 10-15 دقيقة<br>
+      للتهدئة والاسترخاء
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon emoji-float">💧</div>
+      <strong>الماء</strong><br>
+      2-3 لتر بين الفطور والسحور<br>
+      كل ساعة كأس!
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon emoji-float">🥤</div>
+      <strong>السحور الذكي</strong><br>
+      بروتين + ألياف<br>
+      يشبعك لفترة طويلة
+    </div>
+  </div>
+
+  <div class="highlight">
+    ⭐ الالتزام = نزول واضح خلال 2–3 أسابيع<br>
+    🎯 المستهدف: -3 إلى -5 كيلو في الشهر بشكل صحي!
+  </div>
+</div>
+
+<div class="section">
+  <h2>💡 نصائح ذهبية للنجاح</h2>
+
+  <div style="background: linear-gradient(135deg, #fff0f8, #ffe6f2); padding: 15px; border-radius: 12px; margin: 10px 0;">
+    <strong style="color: #ff0066;">🔥 قبل التمرين:</strong><br>
+    • اشربي كأس ماي<br>
+    • سخني جسمك 3-5 دقائق (مشي في المكان، حركات دائرية)<br>
+    • لبسي ملابس مريحة<br>
+    • شغلي موسيقى تحفزك!
+  </div>
+
+  <div style="background: linear-gradient(135deg, #e6fff2, #f0fff6); padding: 15px; border-radius: 12px; margin: 10px 0;">
+    <strong style="color: #00cc66;">✨ بعد التمرين:</strong><br>
+    • تمطي 5 دقائق (مهم جداً!)<br>
+    • كأس ماي أو عصير طبيعي<br>
+    • استحمام دافئ<br>
+    • اكلي وجبة خفيفة خلال 30 دقيقة
+  </div>
+
+  <div style="background: linear-gradient(135deg, #e6f2ff, #f0f8ff); padding: 15px; border-radius: 12px; margin: 10px 0;">
+    <strong style="color: #0066cc;">🌟 للتحفيز:</strong><br>
+    • صوري نفسك كل أسبوع (نفس الإضاءة والملابس)<br>
+    • قيسي محيط الخصر والفخذ بشريط قياس<br>
+    • احتفلي بكل إنجاز صغير<br>
+    • شاركي صديقة معك الرحلة!
+  </div>
+  
+  <div style="background: linear-gradient(135deg, #fff4e6, #ffe6cc); padding: 15px; border-radius: 12px; margin: 10px 0;">
+    <strong style="color: #ff6600;">🎯 نصائح إضافية:</strong><br>
+    • نامي 7-8 ساعات يومياً (النوم يساعد على الحرق!)<br>
+    • امشي 10,000 خطوة يومياً<br>
+    • تجنبي الميزان اليومي (مرة بالأسبوع كافية)<br>
+    • ابتعدي عن المشروبات الغازية حتى الدايت<br>
+    • قللي الملح (يخزن الماي بالجسم)
+  </div>
+</div>
+
+<div class="countdown">
+  <div class="emoji-float">🎯</div>
+  <div>رحلة الألف ميل تبدأ بخطوة واحدة!</div>
+  <div style="font-size: 0.8em; margin-top: 10px;">ابدأي اليوم ولا تؤجلي 💪</div>
+  <div style="font-size: 1em; margin-top: 15px; background: rgba(255,255,255,0.2); padding: 10px; border-radius: 10px;">
+    📅 <strong>توقعات النتائج:</strong><br>
+    أسبوع 1: -0.5 كغ + انتفاخ أقل<br>
+    أسبوع 2: -1 كغ + جسم أخف<br>
+    أسبوع 3: -1.5 كغ + ملابس أوسع<br>
+    أسبوع 4: -2 كغ + شكل واضح!
+  </div>
+</div>
+
+<div class="footer">
+  <p style="font-size: 1.3em;">💖 صممت خصيصاً لـ Aya 💖</p>
+  <p style="font-size: 1.1em; color: #ff4da6; margin-top: 10px;">أنت قادرة على كل شيء! 🌟</p>
+  <p style="font-size: 0.9em; color: #999; margin-top: 15px;">
+    تذكري: النتائج تحتاج صبر والتزام 💪<br>
+    استمتعي بالرحلة ولا تستعجلي النتائج ✨
+  </p>
+</div>
+
+<script>
+// حفظ التقدم في المتصفح
+document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+  const savedState = localStorage.getItem(checkbox.id);
+  if (savedState === 'true') {
+    checkbox.checked = true;
+  }
+  
+  checkbox.addEventListener('change', function() {
+    localStorage.setItem(this.id, this.checked);
+    
+    // فحص إذا تم إكمال كل المهام
+    const allChecked = Array.from(document.querySelectorAll('input[type="checkbox"]')).every(cb => cb.checked);
+    if (allChecked) {
+      setTimeout(() => {
+        alert('🎉🎉🎉 رهيبة! أكملتي كل مهام اليوم! أنت بطلة حقيقية! 💪✨🌟');
+      }, 500);
+    }
+  });
+});
+
+// حفظ حالة أكواب الماء
+document.querySelectorAll('.water-glass').forEach((glass, index) => {
+  const savedState = localStorage.getItem(`water-${index}`);
+  if (savedState === 'filled') {
+    glass.classList.add('filled');
+  }
+  
+  glass.addEventListener('click', function() {
+    if (this.classList.contains('filled')) {
+      localStorage.setItem(`water-${index}`, 'filled');
+    } else {
+      localStorage.removeItem(`water-${index}`);
+    }
+    
+    // فحص إذا تم ملء كل الأكواب
+    const allFilled = Array.from(document.querySelectorAll('.water-glass')).every(g => g.classList.contains('filled'));
+    if (allFilled) {
+      setTimeout(() => {
+        alert('💧 ممتاز! أكملتي 8 أكواب ماء! جسمك راح يشكرك! 💙');
+      }, 300);
+    }
+  });
+});
+
+// رسالة تحفيزية عند إكمال التمرين اليومي
+document.getElementById('workout-done').addEventListener('change', function() {
+  if (this.checked) {
+    alert('🎉 أحسنتِ! أنتِ بطلة! استمري على هذا الإصرار! 💪✨');
+  }
+});
+
+// رسالة تحفيزية عند إكمال الأكل الصحي
+document.getElementById('diet-done').addEventListener('change', function() {
+  if (this.checked) {
+    alert('🥗 رائع! التزامك بالأكل الصحي هو نصف النجاح! 🌟');
+  }
+});
+</script>
+
+</body>
+</html>
